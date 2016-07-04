@@ -9,4 +9,4 @@
 - The game will load and the snake will start moving. You will see two coloured berries - yellow and purple. The yellow ones increase your length and score while the purple ones will lead to ```GAME OVER```.
 - If the snake touches the edges of the game window or its own segments it will lead to ```GAME OVER```.
 - Press ```Q``` to quit the game at any point of time. To reload, once the game is over, press ```R``` to restart the game. 
--If you find the speed to be too fast or slow you can accordingly change the ```clock.tick() function at the end of the file to suit your needs. Cheers! 
+-If you find the speed to be too fast or slow you can accordingly change the ```clock.tick()``` function at the end of the file to suit your needs. Cheers! 
