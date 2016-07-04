@@ -194,7 +194,9 @@ while t:
             if event.key == K_q:
                 t = False     
                                 
-                                
+            if event.key == K_r:
+                os.system(' python snake.py ')
+                
     old_seg = snake.pop()
     allSprites.remove(old_seg)
                        
@@ -232,7 +234,7 @@ while t:
         if snake[0].rect.x == snake[z+3].rect.x and snake[0].rect.y == snake[z+3].rect.y:
             flag = -1
             
-    if increaser == 37: #can be removed for AI training
+    if increaser == 39: #can be removed for AI training
         flag = 1
             
     if snake[0].rect.left == 0 or snake[0].rect.right == 800 or snake[0].rect.top == 0 or snake[0].rect.bottom == 600:
@@ -255,8 +257,8 @@ while t:
         scoreText = fontb.render("Score : " + str(score), True, blue)
         screen.blit(scoreText, (textpos.centerx - 40 ,textpos.centery + 50))            
         fontc = pygame.font.Font(None, 28)
-        instr = fontc.render(" PRESS Q to QUIT", True, (0,255,0))
-        screen.blit(instr, (textpos.centerx - 80 , textpos.centery + 90))
+        instr = fontc.render(" PRESS Q to QUIT or R to RESTART", True, (0,255,0))
+        screen.blit(instr, (textpos.centerx - 140 , textpos.centery + 90))
         
     if flag == 1: #Can remove this for AI training
         font = pygame.font.Font(None, 60)
@@ -269,7 +271,7 @@ while t:
     
     pygame.display.flip()
 
-    clock.tick(20)
+    clock.tick(25)
     
    
 pygame.quit()
